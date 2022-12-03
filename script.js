@@ -6,7 +6,7 @@
                 Gabriela Araujo de Abreu
                 Victor Nunes Saboia
 */
-
+//Dá pra melhorar a iteração -> fazer ela durar até que os resultados da iteração x sejam iguais aos da iteração x-1
 //                 1  2  3  4  5  6  7  8  9  10
 var testMatrix = [[0, 1, 0, 0, 1, 0, 0, 1, 0, 0],// 1
                   [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],// 2 
