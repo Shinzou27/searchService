@@ -131,7 +131,7 @@ function aa(matrix, matrixColumn) {
 }
 function iteration(matrix) {
     var a = createVector(matrix);
-    for(var i = 0; i < 10; i++) {
+    for(var i = 0; i < 100; i++) {
         var h = hh(matrix, a);
         var a = aa(matrix, h);
     }
@@ -144,7 +144,18 @@ function showResults(matrix) {
     }
     document.write("<br>")
 }
-
+function aTest(matrix, matrixColumn) {
+    var AtAa0 = times(times(transpose(matrix), matrix), matrixColumn)
+    return stabilizeVector(AtAa0);
+}
+function iteration2(matrix) {
+    var a = createVector(matrix);
+    for(var i = 0; i < 100; i++) {
+        var a = aTest(matrix, a);
+    }
+    return a;
+}
+console.log(iteration2(exercise5));
 //console.log(sort(iteration(exercise8)))
 //function sort(matrix) {
 //    matrix.sort(function(a, b) {
